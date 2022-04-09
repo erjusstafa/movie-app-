@@ -11,7 +11,7 @@ function PageDetails() {
 
   const fetchItem = async () => {
     const data = await fetch(
-      `https://imdb-api.com/en/API/Title/k_18g342fx/${id}`
+      `https://imdb-api.com/en/API/Title/k_ueb3rn7e/${id}`
     );
     const getData = await data.json();
     setItemMovie(getData);

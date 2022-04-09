@@ -1,28 +1,26 @@
-
 //interface for FilterMovie Component
 export interface ISection {
- val: string;
+  val: string;
   setVal: any;
-  placeholder : string;
+  placeholder: string;
 }
 
 //interface for Loading
 export interface ILoading {
-title : string
+  title: string;
 }
 
 export interface IMovies {
-  movies : IResults[];
-  val : string;
-  loading : boolean;
-  }
-  
+  movies: IResults[];
+  val: string;
+  loading: boolean;
+}
 
 //Interface for API
 export interface IApi {
   queryString: string;
   resultsgdgg: IResults[];
-  errorMessage: null | any
+  errorMessage: null | any;
 }
 
 export interface IResults {

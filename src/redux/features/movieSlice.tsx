@@ -4,12 +4,10 @@ import { IApi } from "../../interface";
 
 
 //fetch API
-export const fetchMovieApi = createAsyncThunk("movies/fetchMovieApi", async () => {
-  return await fetch(
-    `https://imdb-api.com/API/AdvancedSearch/${process.env.REACT_APP_KEY_API}?groups=top_250&count=250`
-  )
+export const fetchMovieApi = createAsyncThunk("movies/fetchMovieApi", async (count : number) => {
+  return await fetch(API_URL + count )
     .then((res) => res.json())
-    .catch((err: string) => console.log("The API isn't fetching", err));
+    .catch((err: string) => console.log("error", err));
 });
 
 

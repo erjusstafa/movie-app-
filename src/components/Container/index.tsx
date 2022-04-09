@@ -13,20 +13,16 @@ function Container(): ReactElement {
   const [val, setVal] = useState<string>("");
 
   useEffect(() => {
-    dispatch(fetchMovieApi());
+    dispatch(fetchMovieApi(250));
   }, [dispatch]);
 
   return (
     <div className={`${styles.Container} w-10/12 mx-auto py-[20px]`}>
-      <FilterMovie
-        val={val}
-        setVal={setVal}
-        placeholder="Search..."
-      />
+      <FilterMovie val={val} setVal={setVal} placeholder="Search..." />
       {loading ? (
         <Loading title="Loading..." />
       ) : (
-        <Movies movies={data?.results} val={val} loading ={loading} />
+        <Movies movies={data?.results} val={val} loading={loading} />
       )}
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import "./App.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./components/Header";
@@ -7,18 +7,16 @@ import Container from "./components/Container";
 import { Routes } from "react-router";
 import PageDetails from "./components/PageDetails";
 
-function App() {
+function App():ReactElement {
   return (
     <div className="app--container  h-full">
       <BrowserRouter>
         <Header />
-        <h1>{process.env.REACT_APP_MY_API_KEY}</h1>
-        {/* <Routes>
+        <Routes>
           <Route path={"/"} element={<Container />} />
           <Route path={"item/:id"} element={<PageDetails />} />
-        </Routes>  */}
-
-         <Footer />
+        </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
