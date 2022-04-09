@@ -1,0 +1,35 @@
+.Container{
+  min-height: calc(100vh - 130px) !important;
+  
+} 
+
+
+.lastSpan {
+  line-height: 20px;
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 1000px) {
+
+
+    .buttonBack{
+        width: fit-content !important;
+    }
+   
+  .textDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: center;
+  }
+
+  .imgItem {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .lastSpan {
+    width: 100%;
+    text-align: center;
+  }
+}
